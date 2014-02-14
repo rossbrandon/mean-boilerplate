@@ -1,4 +1,4 @@
-app.controller('SignupController', function($scope, mvUser, NotifierService, $location, AuthService) {
+app.controller('SignupController', function($scope, UserService, NotifierService, $location, AuthService) {
    $scope.signup = function() {
        var newUserData = {
            username: $scope.email,
