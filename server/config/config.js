@@ -3,12 +3,12 @@ var rootPath = path.normalize(__dirname + '/../../');
 
 module.exports = {
     development: {
-        db: 'mongodb://localhost/ds-local',
+        db: 'mongodb://localhost/<local-db-name/>,
         rootPath: rootPath,
         port: process.env.PORT || 1337
     },
     production: {
-        db: 'mongodb://keeper:proth3anDev!@ds033629.mongolab.com:33629/ds-dev-aws',
+        db: 'mongodb://<username/>:<password/>@<server/>:<port/>/<db-name/>',
         rootPath: rootPath,
         port: process.env.PORT || 80
     }
