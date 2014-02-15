@@ -5,7 +5,9 @@
             .form-group
                 label.col-md-2.control-label(for="email") Email
                 .col-md-10
-                    input.form-control(name="email", type="email", placeholder="Email", ng-model="email", required)
+                    .input-group
+                        span.input-group-addon @
+                        input.form-control(name="email", type="email", placeholder="Email", ng-model="email", required)
             .form-group
                 label.col-md-2.control-label(for="fname") First Name
                 .col-md-10
