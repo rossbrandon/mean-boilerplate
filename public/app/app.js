@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngResource', 'ngRoute', 'ngAnimate', 'mgcrea.ngStrap']);
+var app = angular.module('app', ['ngResource', 'ngRoute']);
 
 app.config(function($routeProvider, $locationProvider) {
     var routeRoleChecks = {

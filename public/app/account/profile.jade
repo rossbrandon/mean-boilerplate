@@ -1,4 +1,4 @@
-.container
+.container(ng-controller="ProfileController")
     .well
         form.form-horizontal(name="profileForm")
             legend User Profile
@@ -17,7 +17,13 @@
             .form-group
                 label.col-md-2.control-label(for="password") Password
                 .col-md-10
-                    input.form-control(name="password", type="password", placeholder="Password", ng-model="password")
+                    input.form-control(id="password", name="password", type="password", placeholder="New Password (Optional)", ng-model="password")
+            .form-group
+                label.col-md-2.control-label(for="passwordConfirmation") Confirmation
+                .col-md-10
+                    input.form-control(id="passwordConfirmation", name="passwordConfirmation", type="password", placeholder="New Password Confirmation", ng-model="passwordConfirmation", pw-check="password")
+                    .msg-block(ng-show="profileForm.$error")
+                        span.text-danger(ng-show="profileForm.passwordConfirmation.$error.pwmatch") Passwords do not match
             .form-group
                 .col-md-10.col-md-offset-2
                     .pull-right
