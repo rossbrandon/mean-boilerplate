@@ -13,7 +13,7 @@
             .form-group
                 label.col-md-2.control-label(for="passwordConfirmation") Confirmation
                 .col-md-10
-                    input.form-control(id="passwordConfirmation", name="passwordConfirmation", type="password", placeholder="New Password Confirmation", ng-model="passwordConfirmation", pw-check="password")
+                    input.form-control(id="passwordConfirmation", name="passwordConfirmation", type="password", placeholder="Password Confirmation", ng-model="passwordConfirmation", pw-check="password")
                     .msg-block(ng-show="signupForm.$error")
                         span.text-danger(ng-show="signupForm.passwordConfirmation.$error.pwmatch") Passwords do not match
             .form-group
