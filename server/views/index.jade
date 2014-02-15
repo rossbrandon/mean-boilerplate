@@ -1,19 +1,22 @@
 extends ../includes/layout
 
 block main-content
-    div.wrap
-        .navbar.navbar-fixed-top
+    .wrap
+        .navbar.navbar-default.navbar-fixed-top(bs-navbar, role="navigation")
             .container
                 .navbar-header
-                    a.navbar-brand(href="/") MEAN App
+                    .navbar-header
+                        a.navbar-brand(href="/") MEAN App
                 .navbar-collapse.collapse
                     ul.nav.navbar-nav
-                        li
+                        li(data-match-route)
                             a.menu-item(href="/") Home
                     div(ng-include="'/partials/account/navbar-login'")
         section.content
             div(ng-view)
 
-        div.push
+        .push
     footer.muted.credit
-        p &copy; 2014 Hive Development LLC.
+        .container
+            p &copy; 2014 &nbsp;
+                a(href="http://hived.io", target="_blank", class="muted") Hivemind Development

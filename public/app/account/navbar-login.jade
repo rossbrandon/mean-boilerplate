@@ -1,7 +1,7 @@
 .navbar-right(ng-controller="NavBarLoginController")
     form.navbar-form(ng-hide="identity.isAuthenticated()")
         ul.nav.navbar-nav
-            li
+            li(data-match-route)
                 a.signup(href="/signup") Sign Up
         .form-group
             input.form-control(placeholder="Username", ng-model="username")
@@ -11,11 +11,22 @@
     ul.nav.navbar-nav.navbar-right(ng-show="identity.isAuthenticated()")
         li.dropdown
             a.dropdown-toggle(href="#", data-toggle="dropdown")
+                i.glyphicon.glyphicon-user &nbsp;
                 | {{identity.currentUser.firstName + " " + identity.currentUser.lastName}}
+                b.caret
             ul.dropdown-menu
+                li.dropdown-header Admin Actions
                 li(ng-show="identity.currentUser.isAdmin()")
-                    a(href="/admin/users") User Admin
+                    a(href="/admin/users")
+                        i.glyphicon.glyphicon-th-list &nbsp;
+                        | User Admin
+                li.divider
+                li.dropdown-header Your Actions
                 li
-                    a(href="/profile") Profile
+                    a(href="/profile")
+                        i.glyphicon.glyphicon-cog &nbsp;
+                        | My Profile
                 li
-                    a(href="", ng-click="signout()") Sign Out
+                    a(href="", ng-click="signout()")
+                        i.glyphicon.glyphicon-off &nbsp;
+                        | Sign Out
