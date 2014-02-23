@@ -1,11 +1,11 @@
 {
-  "name": "MEAN Boilerplate",
+  "name": "MEAN-Boilerplate",
   "version": "0.1.3",
   "homepage": "https://github.com/rosstafarian/mean-boilerplate",
   "authors": [
     "rosstafarian <rosstafarian1@gmail.com>"
   ],
-  "description": "\"DegreeSight Beta\"",
+  "description": "\"MEAN Stack Boilerplate Application\"",
   "license": "MIT",
   "private": true,
   "dependencies": {
