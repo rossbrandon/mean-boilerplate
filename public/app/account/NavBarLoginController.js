@@ -6,7 +6,7 @@ app.controller('NavBarLoginController', function($scope, $http, IdentityService,
                 NotifierService.notify('You have successfully signed in');
                 $location.path('/');
             } else {
-                NotifierService.notify('Username/Password combination incorrect');
+                NotifierService.error('Username/Password combination incorrect');
             }
         });
     };
