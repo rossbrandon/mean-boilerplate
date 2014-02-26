@@ -13,3 +13,5 @@ module.exports = {
         port: process.env.PORT || 80
     }
 };
+
+// Don't forget to run heroku config:set NODE_ENV=production when deploying
